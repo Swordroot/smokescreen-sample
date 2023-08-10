@@ -1,0 +1,4 @@
+# config.yaml
+---
+allow_missing_role: true  # skip mTLS client validation
+statsd_address: 127.0.0.1:8200
