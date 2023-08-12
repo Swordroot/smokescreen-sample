@@ -9,5 +9,5 @@ RUN mkdir /app
 COPY --from=builder /app/smokescreen /app
 COPY --from=builder /app/config.yaml /app
 WORKDIR /app
-RUN ls
-ENTRYPOINT ["./smokescreen", "--config-file=config.yaml"]
+EXPOSE 1080
+ENTRYPOINT ["./smokescreen", "--listen-port", "1080", "--config-file", "config.yaml"]
